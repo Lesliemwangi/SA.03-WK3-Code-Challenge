@@ -1,3 +1,11 @@
+# SA.03: WK3: Code Challenge
+
+#### Date, 2024/04/07
+
+#### By Leslie Wambui Mwangi
+
+## Description
+
 # Flatdango
 
 Flatiron Movie Theater is open for business! You will be building out an
@@ -175,6 +183,42 @@ attempting the bonus deliverables!**
 1. Click on a movie in the menu to replace the currently displayed movie's
    details with the new movie's details. Note that you may have to make an
    additional GET request to access the movie's details.
+
+
+## Installation
+You use git clone to be able to download the documents in the GitHub
+
+
+
+## Installation Requirements
+Git
+
+
+
+### Installation instruction
+git@github.com:Lesliemwangi/SA.02-WK2-Code-Challenge.git
+
+
+
+# Live Link
+https://github.com/Lesliemwangi/SA.02-WK2-Code-Challenge.git
+
+
+
+## Technologies used
+Github
+Javascript
+
+
+
+## Support and contact details
+(https://github.com/Lesliemwangi)
+
+
+
+### License
+The content of this site is licensed under the Lesliemwangi
+Copyright (c) 2024
    
 
 
