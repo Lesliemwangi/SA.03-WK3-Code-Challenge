@@ -196,12 +196,12 @@ Git
 
 
 ### Installation instruction
-git@github.com:Lesliemwangi/SA.02-WK2-Code-Challenge.git
+git@github.com:Lesliemwangi/SA.03-WK3-Code-Challenge.git
 
 
 
 # Live Link
-https://github.com/Lesliemwangi/SA.02-WK2-Code-Challenge.git
+https://github.com/Lesliemwangi/SA.03-WK3-Code-Challenge.git
 
 
 
