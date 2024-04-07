@@ -1,0 +1,104 @@
+{
+  "films": [
+    {
+      "id": "1",
+      "title": "Damsel",
+      "runtime": "112",
+      "capacity": 100,
+      "showtime": "09:30PM",
+      "tickets_sold": 98,
+      "description": "A young woman agrees to marry a handsome prince -- only to discover it was all a trap. She is thrown into a cave with a fire-breathing dragon and must rely solely on her wits and will to survive",
+      "poster": "https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQb_x9BwxzirfmWBblQm8niUgkHwhnhj7PnS6f1zAJVdTtayeYpfb3K08z6-EfM0z2TnnZ4kXzlfzxeR6pwnesLoTl1G4NTCN_BYGMC-xzSbBw93N1c_57bS2cqLigM2ZZjA2xk_dyCySjpYtiMGjxijb.jpg?r=7b4"
+    },
+    {
+      "id": "2",
+      "title": "Divergent",
+      "runtime": "139",
+      "capacity": 100,
+      "showtime": "04:00PM",
+      "tickets_sold": 90,
+      "description": "In a divided, war-torn world, Tris discovers her specialabilities and bands with Four to resist a sinister plot against those like them.",
+      "poster": "https://occ-0-1381-999.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABbrhJFkhqUofWIeiBYrDv3jn3-OlNQ19iEucWTyOs7tD9PG1Xtvl7qRhp7WbJOEmGMLNg3-Eyfz9BO6cjRVWKFIykAtE7WpHZLrE.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Mea Culpa",
+      "runtime": "120",
+      "capacity": 100,
+      "showtime": "03:30PM",
+      "tickets_sold": 80,
+      "description": "A criminal defense attorney must choose between family, duty and her own dangerous desires when she takes on the case of an artist accused of murder.",
+      "poster": "https://dnm.nflximg.net/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABVoJB1a-bCu8-RoS4wpMW5g5rsS_BxlgU8bz7CPsXCAEeyKzQvT9mbsmtH0_pNwPrXZRuNxgMiXo0fVsa7p5Gg11wyF3GA-hobjJDkPn9oB3lcYKI5Tkq1X9ffEveaWlfcfLHQ.jpg?r=e39"
+    },
+    {
+      "id": "4",
+      "title": "The Maze Runner",
+      "runtime": "114",
+      "capacity": 90,
+      "showtime": "10:30PM",
+      "tickets_sold": 70,
+      "description": "In a postapocalyptic future, a group of teenage boys are trapped in a mysterious community where they must solve a giant maze in order to survive.",
+      "poster": "https://www.tvguide.com/a/img/catalog/provider/1/2/1-6033165908.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Irish Wish",
+      "runtime": "93",
+      "capacity": 100,
+      "showtime": "07:30PM",
+      "tickets_sold": 100,
+      "description": "Maddie's dream guy is days away from marrying her best friend when a wish for true love made on an ancient stone in Ireland magically alters her fate.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTlhYzQ1YmEtYTljNi00YTY3LTg3NzMtNzU0MmFkZGM4YmJiXkEyXkFqcGdeQXVyMTM1NjM2ODg1._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Players",
+      "runtime": "105",
+      "capacity": 90,
+      "showtime": "07:30PM",
+      "tickets_sold": 80,
+      "description": "A sports writer unused to relationships falls for a fling, leading her to reconsider playing the field in favor of commitment.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTNiYzY1MmYtOGY5Zi00ODk3LTg2OGQtZTUyOTA1NzljOWUzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Art Of Love",
+      "runtime": "99",
+      "capacity": 100,
+      "showtime": "07:30PM",
+      "tickets_sold": 88,
+      "description": "After learning that the art thief she has been chasing is her ex-lover, an officer working for Interpol concocts a plan to catch him red-handed.",
+      "poster": "https://resizing.flixster.com/zljrGA0QN5D9RgvhpDJNlbL_qik=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzM4ODdlNDEyLTVhODQtNGRhYy1iYjZmLWFiMTZmZDdkMTAxYy5qcGc="
+    },
+    {
+      "id": "8",
+      "title": "Lift",
+      "runtime": "106",
+      "capacity": 90,
+      "showtime": "07:30PM",
+      "tickets_sold": 78,
+      "description": "A master thief is wooed by his ex-girlfriend and the FBI to pull off an impossible heist with his international crew on a 777 passenger flight from London to Zurich.",
+      "poster": "https://dnm.nflximg.net/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABZySF1hnDv-vCH6y--zgS3V3SLKphY0mJ_BtVGZMuIZpG2igUVRvPhH_uakCZMtYKP11HdvEM6nhKSuWemjtFSXAGpSU9c5jAWvK21_Na2ulisCITcGkZw0Tyagq72jRtUMjMg.jpg?r=6b6"
+    },
+    {
+      "id": "9",
+      "title": "Midnight Sun",
+      "runtime": "106",
+      "capacity": 100,
+      "showtime": "07:30PM",
+      "tickets_sold": 88,
+      "description": "Born with a fatal sensitivity to sunlight, a sheltered teen girl falls for her neighbor, but hides her condition from him as their romance blossoms.",
+      "poster": "https://occ-0-2794-2218.1.nflxso.net/dnm/api/v6/Da_vleYcahiCE7JMYt8LJRyoenc/AAAABTpO1SIHClhP54zEjudXWqa20ta9k-E5yiw9N_YIU16nsz3b1-VzFgmPZ8qlgA6eErS3PY55cwqmeluSens2O9-YOFSB.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Disconnect",
+      "runtime": "107",
+      "capacity": 100,
+      "showtime": "07:30PM",
+      "tickets_sold": 100,
+      "description": "After falling victim to a scam, a desperate man races the clock as he attempts to plan a luxurious destination wedding for an important investor.",
+      "poster": "https://images.justwatch.com/poster/302560923/s718/disconnect-the-wedding-planner.jpg"
+    }
+  ]
+}
