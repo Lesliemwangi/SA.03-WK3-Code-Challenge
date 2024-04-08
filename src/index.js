@@ -1,5 +1,5 @@
 // Your code here
-// Declare a function with the variable film, which presumably points to an API endpoint for movies.
+// Declare a function cinema with a variable which presumably points to an API endpoint for movies.
 let cinema = "http://localhost:3000/films";
 
 // Add an event listener to the DOMContentLoaded event, which will execute the getCinema() function once the DOM is fully loaded
@@ -20,8 +20,8 @@ function getCinema() {
     // Process the response data in JSON format.
     .then((res) => res.json())
     .then((cinema) => {
-      // For each cinema item received, it calls the cinemaList() function and 
-     // triggers a click event on the first movie element with the ID id1.
+      // For each cinema item received, it calls the cinemaList() function and
+      // triggers a click event on the first movie element with the ID id1.
       cinema.forEach((movie) => {
         cinemaList(movie);
       });
@@ -45,8 +45,18 @@ function cinemaList(cinema) {
   // Append the list item to the element with the ID films.
   ul.appendChild(li);
   // Add classes 'film' and 'item' to the list item.
-  li.classList.add("film");
-  li.classList.add("item");
+  li.classList.add("film", "item");
+
+  // Add a delete button to each film
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  deleteButton.classList.add("delete-button");
+  li.appendChild(deleteButton);
+  // Add an event listener to delete button to remove the film when clicked
+  deleteButton.addEventListener("click", (event) => {
+    // Remove the film from DOM
+    ul.removeChild(li);
+  });
   // Add a click event listener to the list item that invokes the cinemaClick() function with the cinema item as an argument.
   li.addEventListener("click", () => {
     cinemaClick(cinema);
@@ -74,119 +84,50 @@ console.log(cinemaClick);
 
 // Declare the function handleBuyTicket
 function handleBuyTicket() {
-  // Retrieve the ticket number element
-  const ticketDiv = document.querySelector("#ticket-num");
-  const tickets = ticketDiv.textContent.split(" ")[0];
-   // Extract the number of remaining tickets from the text content.
-  // Check if there are tickets available: If yes, decrements the ticket count and updates the text content. 
- // If no tickets are available, it displays an alert and modifies the CSS classes of the target element.
+  // Retrieve the ticket number element and checks if there are tickets available.
+  const buyButton = document.querySelector("#ticket-num");
+  const tickets = parseInt(buyButton.textContent.split(" ")[0]);
+  // Extract the number of remaining tickets from the text content.
+  // Check if there are tickets available: If yes, decrements the ticket count and updates the text content.
+  // If no tickets are available, it displays an alert and modifies the CSS classes of the target element.
   if (tickets > 0) {
-    ticketDiv.textContent = tickets - 1 + "";
-  } else if (tickets == 0) {
-    alert("No more tickets!");
-    e.target.classList.add("sold-out");
-    e.target.classList.remove("orange");
+    // If tickets are available, decrement the ticket count and update the text content.
+    buyButton.textContent = tickets - 1;
+  } else {
+    // If no tickets are available, display the movie poster and update the button to "Sold Out".
+    const poster = document.querySelector("img#poster");
+    const info = document.querySelector("#showing");
+    const movie = getCurrentMovie(); // Get the current movie details
+
+    poster.src = movie.poster;
+    poster.alt = movie.title;
+
+    info.querySelector("#title").textContent = movie.title;
+    info.querySelector("#runtime").textContent = movie.runtime + " minutes";
+    info.querySelector("#film-info").textContent = movie.description;
+    info.querySelector("#showtime").textContent = movie.showtime;
+
+    buyButton.textContent = "Sold Out";
+    buyButton.classList.add("disabled");
+
+    // Show an alert to inform the user that tickets are sold out.
+    alert("Sorry, tickets are sold out!");
   }
 }
 console.log(handleBuyTicket);
 
+function getCurrentMovie() {
+  // Retrieve the current movie details from the displayed information
+  // It extracts the title, poster image source, runtime, description, showtime, etc., and returns them as an object.
+  const info = document.querySelector("#showing");
+  return {
+    title: info.querySelector("#title").textContent,
+    poster: document.querySelector("img#poster").src,
+    runtime: parseInt(info.querySelector("#runtime").textContent),
+    description: info.querySelector("#film-info").textContent,
+    showtime: info.querySelector("#showtime").textContent,
+  };
+}
 
-// const movieList = document.getElementById("films");
-// let movieData = [];
+console.log(getCurrentMovie);
 
-// function fetchData() {
-//   fetch("db.json")
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error("Error fetching data from db.json");
-//       }
-//       return response.json();
-//     })
-//     .then((data) => {
-//       movieData = data.films;
-//       displayData();
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching data from db.json:", error);
-//       showErrorMessage("Error loading movie data");
-//     });
-// }
-
-// function displayData() {
-//   movieData.forEach((movie) => {
-//     const li = createMovieListItem(movie);
-//     movieList.appendChild(li);
-//   });
-// }
-
-// function createMovieListItem(movie) {
-//   const li = document.createElement("li");
-//   li.textContent = movie.title;
-//   li.dataset.movieId = movie.id;
-//   li.classList.add("film", "item");
-//   li.addEventListener("click", () => updateDetails(movie.id));
-//   return li;
-// }
-
-// function updateDetails(movieId) {
-//   const movie = movieData.find((m) => m.id === movieId);
-//   if (!movie) return;
-
-//   const availableTickets = movie.capacity - movie.tickets_sold;
-//   const buyButton = document.getElementById("buy-ticket");
-
-//   buyButton.textContent = availableTickets > 0 ? "Buy Ticket" : "Sold Out";
-//   buyButton.classList.toggle("disabled", availableTickets === 0);
-//   buyButton.onclick = () => {
-//     if (availableTickets > 0) {
-//       purchaseTicket(movie);
-//     } else {
-//       alert("Sorry, tickets are sold out!");
-//       e.target.classList.add("sold-out");
-//       e.target.classList.remove("orange");
-//     }
-//   };
-
-//   displayMovieDetails(movie);
-
-//   // Display the available tickets count
-//   updateTicketCount(movie.id);
-// }
-
-// function purchaseTicket(movie) {
-//   movie.tickets_sold++;
-//   updateTicketCount(movie.id);
-//   updateDetails(movie.id);
-// }
-
-// function updateTicketCount(movieId) {
-//   const movie = movieData.find((m) => m.id === movieId);
-//   const availableTickets = movie.capacity - movie.tickets_sold;
-//   document.getElementById("ticket-num").textContent = availableTickets;
-
-//   // Alert and disable button if tickets are sold out
-//   if (availableTickets === 0) {
-//     alert("Sorry, tickets are sold out!");
-//     const buyButton = document.getElementById("buy-ticket");
-//     buyButton.classList.add("disabled");
-//   }
-// }
-
-// function displayMovieDetails(movie) {
-//   document.getElementById("title").textContent = movie.title;
-//   document.getElementById("runtime").textContent = `${movie.runtime} minutes`; 
-//   document.getElementById("film-info").textContent = movie.description;
-//   document.getElementById("showtime").textContent = movie.showtime;
-//   document.getElementById("poster").src = movie.poster;
-//   document.getElementById("poster").alt = `Poster for ${movie.title}`;
-// }
-
-// function showErrorMessage(message) {
-//   const errorMessage = document.createElement("div");
-//   errorMessage.textContent = message;
-//   errorMessage.classList.add("ui", "negative", "message");
-//   document.body.appendChild(errorMessage);
-//   setTimeout(() => errorMessage.remove(), 5000);
-// }
-
-// fetchData();

@@ -43,9 +43,16 @@ body {
 
 #films {
   font-size: 100px;
-  color: #aaff00;
+  color: #00ff1e;
 }
-
+.delete-button{
+  border-radius: 5px;
+  background-color: #ff9e44;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
 #films li::before {
   content: "";
 }
