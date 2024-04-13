@@ -6,6 +6,8 @@
 
 ## Description
 
+This project is a web application designed for buying movie tickets called "FlatDango." The application fetches movie data from an API endpoint and dynamically populates the interface with movie titles. Users can click on a movie title to view more details about the selected movie, including its poster, runtime, description, showtime, and the number of remaining tickets. Additionally, users can buy tickets, with the interface updating to reflect the updated ticket count. If tickets are sold out, the interface indicates this and disables the ticket buying functionality. The project utilizes HTML, CSS, JavaScript, and the Semantic UI library for styling.
+
 # Flatdango
 
 Flatiron Movie Theater is open for business! You will be building out an
