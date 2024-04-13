@@ -209,6 +209,8 @@ https://github.com/Lesliemwangi/SA.03-WK3-Code-Challenge.git
 
 ## Technologies used
 Github
+HTML
+CSS
 Javascript
 
 
