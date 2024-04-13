@@ -51,9 +51,14 @@ function cinemaList(cinema) {
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete";
   deleteButton.classList.add("delete-button");
+  // Set film ID as a data attribute
+  deleteButton.setAttribute("data-id", cinema.id);
   li.appendChild(deleteButton);
   // Add an event listener to delete button to remove the film when clicked
   deleteButton.addEventListener("click", (event) => {
+    // Get the film ID from the data attribute
+    const filmId = event.target.getAttribute("data-id");
+    deleteFilm(filmId);
     // Remove the film from DOM
     ul.removeChild(li);
   });
@@ -63,6 +68,26 @@ function cinemaList(cinema) {
   });
 }
 console.log(cinemaList);
+
+// Declare the function deleteFilm
+function deleteFilm(id) {
+  // Make a DELETE request to the server to delete the film with the given ID.
+  fetch(`${cinema}/${id}`, {
+    // Set the method to DELETE
+    method: "DELETE",
+  })
+    // Convert the response to JSON
+    .then((response) => response.json())
+    // Handle the response from the server
+    .then((data) => {
+      // Handle success response if needed
+      console.log("Film deleted from server:", data);
+    })
+    .catch((error) => {
+      // Handle error
+      console.error("Error deleting film:", error);
+    });
+}
 
 // Declare the function cinemaClick
 function cinemaClick(cinema) {
@@ -130,4 +155,3 @@ function getCurrentMovie() {
 }
 
 console.log(getCurrentMovie);
-
